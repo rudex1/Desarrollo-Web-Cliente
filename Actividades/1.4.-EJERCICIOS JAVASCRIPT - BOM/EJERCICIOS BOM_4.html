@@ -1,0 +1,47 @@
+
+ <!DOCTYPE html>
+
+<html>
+<head>
+<title>Ejemplo aprenderaprogramar.com</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+	window.onload = function () {
+		var nueva;
+	}
+	
+	function pulsar(){
+		nueva=window.open("","VENTANA", "height=50, width=200");
+		nueva.onmousemove = mover;
+		nueva.document.write("<br/><div align='center'><button style='height:60;width:100'>Pulsame</button></div>");
+	}
+
+	function mover(){
+		var x=Math.round(Math.random() * 100);
+		var y=Math.round(Math.random() * 100);
+		
+		if (Math.round(Math.random())==1){
+			x= -x
+		}
+
+		if (Math.round(Math.random())==1){
+			y= -y
+		}
+		nueva.moveBy(x,y);
+	}
+
+	function parar(){
+		nueva.onmousemove=quieto;
+	}
+
+	function quieto(){
+		nueva.moveBy(0,0);
+	}
+
+</script>
+</head>
+<body>
+<button onClick="pulsar()">Pulsame para abrir nueva ventana</button>
+<button onClick="parar()">Parar la ventana</button>
+</body>
+</html>

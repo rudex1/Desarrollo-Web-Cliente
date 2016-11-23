@@ -1,0 +1,43 @@
+<html>
+<head>
+
+<script type="text/javascript">
+
+  window.onload=function() {
+    document.getElementById("formulario1").onsubmit=function () {
+      var nomb = document.getElementById("nombre").value;
+      var apell = document.getElementById("apellido").value;
+      var direcc= document.getElementById("direccion").value;
+      if (nomb.length==0 || apell.length==0 || direcc==0){
+        alert('El nombre, apellido o direccion esta vacio');
+        //return false;
+      }
+      else{
+        //return true;
+        window.alert("Nombre: "+nomb+" Apellido: "+apell+" Direccion: "+direcc);
+
+      }
+    
+    }
+  }
+
+</script>
+
+</head>
+<body>
+
+<form method="post" action="" id="formulario1">
+Ingrese nombre:
+<input type="text" id="nombre" name="nombre" size="20">
+<br>
+Ingrese Apellido:
+<input type="text" id="apellido" name="apellido" size="20">
+<br>
+Ingrese Direccion:
+<input type="text" id="direccion" name="direccion" size="20">
+<br>
+<input type="submit" id="confirmar" name="confirmar" value="Confirmar">
+</form>
+
+</body>
+</html>

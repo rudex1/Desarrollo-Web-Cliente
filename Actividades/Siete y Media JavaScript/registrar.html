@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registro de usuarios</title>	
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+<body>
+    <center>
+        <h1><b><font>La web de registro de usuarios</font></b></h1>
+    </center>    
+    <img id="img1" src=""/>
+    <form name="miniformualario" class="formulario" method="POST" onsubmit="return validarDatos()">
+        <div id="largeModal">
+            <label >Nombre</label>   
+            <input id="nombre" type="text" name="nombre"/>        <img width="20" height="20"/><br/>
+            <label>Apellidos</label>
+            <input type="text" id="apellido" name="apellido"/>
+                <img width="20" height="20"/><br/>
+            <label>Edad</label>
+            <input type="text" id="edad" name="edad"/>
+                <img width="20" height="20"/><br/>
+            <label>Email</label>
+            <input type="text" id="email" name="email"/>
+                <img width="20" height="20"/>
+                <br/><br/>
+            <input id="Enviar" type="submit"  value="Enviar" />
+            <input id="Reiniciar" type="reset" value="Reiniciar datos" /> 
+            <input id="inicio" type="button" name="inicio" value="inicio" onclick="redireccionarinicio();"> 
+        </div>   
+    </form>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="js/registrar.js"></script>
+        <script src="js/app.js"></script>
+
+</body>
+</html>

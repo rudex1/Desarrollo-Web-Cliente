@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Eventos</title> 
+   
+<script type="text/javascript">
+function mostrar(valor) {
+var texto;
+  switch(valor){
+    case 1:
+    texto = document.getElementById("boton1").value;
+    break;
+    case 2:
+    texto = document.getElementById("boton2").value;
+    break;
+    case 3:
+    texto = document.getElementById("boton3").value;
+    break;
+    default:
+    texto = "error";
+    break;
+  }
+document.getElementById("eltexto").value="Pulsado "+ texto;
+}
+</script>
+</head>
+
+<body>
+<input type="button" id="boton1" onclick="mostrar(1)" value="Boton1"/>
+<input type="button" id="boton2" onclick="mostrar(2)" value="Boton2"/>
+<input type="button" id="boton3" onclick="mostrar(3)" value="Boton3"/>
+<input type="text" size="30" id="eltexto" />
+</body>
+</html>

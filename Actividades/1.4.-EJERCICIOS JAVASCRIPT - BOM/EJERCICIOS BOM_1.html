@@ -1,0 +1,43 @@
+<!---
+1.	Crea una página en el que aparecerá un botón dentro de un <div>
+ que tendrá un color de fondo rojo. Al pulsar sobre el botón añadiremos un nuevo <div> 
+  con un color de fondo aleatorio y el texto “SOY UN NUEVO <DIV>”.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;" />
+<meta name="author" content="alor86" />
+<title>CrearDiv</title>
+
+<script type="text/javaScript">
+
+	function addElement(){
+		//crea un nuevo elemento div
+		//le agrega contenido
+		var newDiv = document.createElement("div");
+		var newContent = document.createTextNode("SOY UN NUEVO <DIV>");
+		newDiv.appendChild(newContent);//agrega el nodo al texto al elemento div creado
+
+		//agrega el elemento y su contenido 
+		var currentDiv =document.getElementById("div1");
+		
+		document.body.insertBefore(newDiv, currentDiv);
+
+		
+
+	} 
+	
+</script>
+
+</head>
+
+<body>
+	<div id="div1"></div>
+	<div id="boton">
+		<input type="button" value="Crear Div" onclick="addElement()"/>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+function calcularSuma()
+{
+    var casilla1=document.getElementById("num1");
+    var n1 = casilla1.value;
+    var casilla2=document.getElementById("num2");
+    var n2 = casilla2.value;
+    var resultado=document.getElementById("resultado");
+    resultado.innerHTML = "Suma: " +(parseInt(n1)+parseInt(n2));
+    resultado.style.color = "blue";
+}
+</script>
+
+    <form center>
+        Primer numero:
+        <input type="text" name="num1" id="num1" />
+        <br />
+ 
+        Segundo numero:
+        <input type="text" name="num2" id="num2" />
+        <br />
+ 
+        <p id="resultado">Suma: </p>
+ 
+        <button type="button" onclick='calcularSuma()'>Calcular suma</button>
+ 
+    </form>
+</body>
+</html>

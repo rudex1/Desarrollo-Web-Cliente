@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EJERCICIO eventos 2</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+	function rojo() {
+	         this.style.color = "red";
+	         }
+	function azul() {
+	         this.style.color = "blue";
+	         }	       
+	document.getElementById("p1").onclick = rojo;
+	document.getElementById("p1").ondblclick = azul;
+	document.getElementById("p2").onclick = rojo;
+	document.getElementById("p2").ondblclick = azul;
+}
+/*var parrafo = getElementsByTagName('p');
+	for (var i = 0; i <parrafo.lenght; i++) {
+		parrafo[i].addEventListener("rojo", onclick, true);
+		parrafo[i].addEventListener("azul", ondblclick, true);
+		function rojo(){
+			this.style.color = "red";
+
+		}
+		function azul(){
+			this.style.color = "blue";
+			
+		}
+	}*/
+</script>
+</head>
+<body>
+
+<p  id="p1">Crear una pagina la cual cambia a colores distintos a un parrafo, segun hagamos sobre el un click o un doble click.</p>
+
+<p id="p2">Para lograrlo tanto para el evento click y doble click llamaremos a la misma funcin. Y segun el tipo de evento cambiar de color al parrafo.</p> 
+</body>
+</html>

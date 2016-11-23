@@ -1,0 +1,25 @@
+     <html>
+    <body>
+    <script language="javascript">
+   
+        function datos(){
+            document.write("<ul><li>");
+            document.write(navigator.appName + "</li><li>");
+            document.write("Resolución de pantalla: ");
+            document.write(screen.width + "*" + screen.height);
+            document.write("</li><li>");
+            document.write("Area visible disponible: ");
+            document.write(screen.availWidth + "*" + screen.availHeight);
+            document.write("</li><li>");
+            document.write("Resolución de color: ");
+            document.write(screen.colorDepth);
+            document.write("</li></ul>");
+
+        }
+        
+
+    
+    </script>
+    </body>
+    <input type="button" value="Refrescar página" onclick="datos()">
+    </html>

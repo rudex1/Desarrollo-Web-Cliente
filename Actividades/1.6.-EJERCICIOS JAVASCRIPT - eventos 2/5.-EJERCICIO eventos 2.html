@@ -1,0 +1,31 @@
+<html>
+<head>
+
+<script type="text/javascript">
+
+  addEventListener('load',inicio,false);
+
+  function inicio()
+  {
+    document.getElementById('descripcion').addEventListener('keyup',presion,false);
+  }
+
+  function presion()
+  {
+    var canti=document.getElementById('descripcion').value.length;
+    var disponibles=140-parseInt(canti+"/140 Craracteres");
+    document.getElementById('letras').innerHTML=disponibles;
+  }
+
+</script>
+
+</head>
+<body>
+<div align="center">
+<textarea id="descripcion" cols="40" rows="3" name="descripcion"> </textarea></br>
+<span id="letras">140/140 caracteres</span>
+</div>
+</body>
+
+</html>
+   

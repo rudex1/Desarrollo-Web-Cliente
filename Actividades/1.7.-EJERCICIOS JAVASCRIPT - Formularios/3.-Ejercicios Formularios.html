@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Limitar numero de caracteres en textarea</title>
+<link href="css/myStyle.css" rel="stylesheet" type="text/css">
+ 
+<!--<style type="text/css">
+body {
+  font-family: arial, helvetica;
+}
+label{
+  
+}
+</style>-->
+ 
+<script type="text/javascript">
+function limita(elEvento, maximoCaracteres) {
+  var elemento = document.getElementById("texto");
+  var email = document.formulario2.email;
+
+  //var email = document.getElementsByTagName("email");
+ 
+  // Obtener la tecla pulsada 
+  var evento = elEvento || window.event;
+  var codigoCaracter = evento.charCode || evento.keyCode;
+
+  var valor = document.getElementById("telefono").value;
+  // Permitir utilizar las teclas con flecha horizontal
+  if(codigoCaracter == 37 || codigoCaracter == 39) {
+    return true;
+  }
+ 
+  // Permitir borrar con la tecla Backspace y con la tecla Supr.
+  if(codigoCaracter == 8 || codigoCaracter == 46) {
+    return true;
+  }
+  else if(elemento.value.length >= maximoCaracteres ) {
+    return false;
+  }
+  else {
+    return true;
+  }
+
+if( isNaN(valor) ) {
+  return false;
+} else{
+
+}
+}
+ 
+function actualizaInfo(maximoCaracteres) {
+  var elemento = document.getElementById("texto");
+  var info = document.getElementById("info");
+ 
+  if(elemento.value.length >= maximoCaracteres ) {
+    info.innerHTML = "Máximo "+maximoCaracteres+" caracteres";
+  }
+  else {
+    info.innerHTML = "Puedes escribir hasta "+(maximoCaracteres-elemento.value.length)+" caracteres adicionales";
+  }
+  function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+ 
+</script>
+</head>
+ 
+<body>
+<form method="POST" action="" name="formulario2">
+  <center>
+    <label>Nombre: <input type="text" name="nombre"></label>
+    <br/>
+    <label>Apellido: <input type="text" name="apellido"></label>
+    <br/>
+    <label>Telefono: <input type="number" name="telefono" id="telefono"></label>
+    <br/>
+    <label>email: <input type="email" name="email"></label>
+    <br/>
+     
+    <div id="info">Maximo 100 caracteres</div>
+    <textarea id="texto" onkeypress="return limita(event, 100);" onkeyup="actualizaInfo(100)" rows="6" cols="30"></textarea>
+
+  <div class="botones">
+    <input id="alta" type="submit" value="Endviar" >&nbsp;
+    <input type="reset" name="Cancelar" value="Cancelar">
+  </div>     
+  </center>
+</form>  
+</body>
+</html>

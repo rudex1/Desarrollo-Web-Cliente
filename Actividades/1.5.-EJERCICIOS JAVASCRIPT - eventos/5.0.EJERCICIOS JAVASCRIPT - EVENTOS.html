@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Javascript en enlaces</title> 
+
+</head>
+<script type="text/javascript">
+function mostrar(valor) {
+	switch(valor){
+case 1:
+	document.getElementById("eltexto").value = document.getElementById("enlace1").href;
+	break;
+case 2:
+	document.getElementById("eltexto").value = document.getElementById("enlace2").href;
+	break;
+case 3:
+	document.getElementById("eltexto").value = document.getElementById("enlace3").href;
+break;
+
+default:
+	document.getElementById("eltexto").value ="error";
+break;
+}
+}
+
+</script>
+
+<ul>
+<li><a href="http://www.adobe.com" id="enlace1" 
+onMouseOver="mostrar(1);">Adobe</a></l
+i>
+<li><a href="http://www.apple.com" id="enlace2" 
+onMouseOver="mostrar(2);">Apple</a></li>
+<li><a href="http://www.ibm.com" id="enlace3" onMouseOver="mostrar(3);">IBM</a></li>
+</ul>
+<input type="text" size="30" id="eltexto" />
+</body>
+</html>

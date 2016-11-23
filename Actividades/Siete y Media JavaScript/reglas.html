@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Reglas de juego</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    
+
+
+  </head>
+  <body style="font-family: 'Allerta', sans-serif;" clss="col-md-12 col-xs-12">
+  <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+
+  <!--boton de inicio-->
+   <div class="col-md-2 col-md-offset-5">
+         <input id="inicio" type="button" value="Inicio" onclick="redireccionarinicio();"  style="">
+      </div>
+
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+               <h1>SIETE Y MEDIO</h1><hr/>
+                      <a name="descripcion"></a>
+                      <p>Descripción</p>
+                      <p>Se trata de un juego de baraja española de 40 cartas, denominado indistintamente siete y medio o siete y media.</p>
+                      <p>No existe un número específico de jugadores que deban participar en el siete y medio, a partir de los 2 jugadores, aunque es recomendable que no se supere el número de 8 jugadores.</p>
+                      <p>En la versión que aquí se ofrece el número de jugadores puede ser 4, 5 o 6.</p>
+                      <a name="objetivoJ"></a>
+                      <p>Objetivo del juego</p>
+                      <p>Es un juego de apuestas, generalmente con pequeñas cantidades de dinero. El objetivo es simplemente el de intentar <b>ganar las apuestas</b> planteadas en cada mano. La finalización de la partida depende de la decisión de cada jugador de continuar en la misma, ya que la partida en si misma no tiene un final definido.</p>
+                      <p>En cada una de las manos o apuestas <b>cada jugador compite contra la banca</b>; el objetivo es intentar sumar <b>siete y medio</b> o el número más cercano posible, sin sobrepasar dicha cantidad.</p>
+                      <a name="valorCartas"></a>
+                      <p>Valor de las cartas</p>
+                      <p>A los efectos de sumar cada jugador los deseados <i>siete y medio</i>,  cada carta tiene, indistintamente de su palo, el valor que indica su propio índice, salvo las doce figuras (sotas, caballos y reyes) que tienen un valor de medio punto.</p>
+                      <a name="desarrolloJ"></a>
+                      <p>Desarrollo del juego</p>
+                      <a name="comienzoMano"></a>
+                      <p>Comienzo de la partida y de cada una de las manos</p>
+                      <p>Por sorteo se decide quién es el jugador que comenzará teniendo <b>la banca</b>, que será quien reparte. La banca reparte una carta a cada uno de los jugadores, incluyéndose a sí misma.</p>
+                      <a name="apuestaJug"></a>
+                      <p>La apuesta del jugador</p>
+                      <p>Por  turnos, de derecha a izquierda, empezando por el jugador situado a la derecha de la banca, cada jugador realiza dos acciones:</p>
+                      <ul class="ul2">
+                      <li>En primer lugar debe hacer su apuesta, generalmente dentro de un rango previamente fijado.</li>
+                      <li>Seguidamente debe decidir si desea recibir más cartas del mazo. 
+                      Si no lo desea debe indicarlo diciendo que se planta. Si por el contrario, desea cartas para intentar acercarse lo más posible a sumar siete y medio, podrá pedir todas las que quiera de una en una pudiéndose plantar cuando quiera.</li>      </ul>
+                      <p>El jugador que está recibiendo cartas podrá mantener sobre la mesa una única carta boca abajo, manteniendo así siempre su jugada en secreto. Por lo tanto, cada vez que pide una nueva carta, debe decidir entre estas dos opciones:</p>
+                      <p>1. Pedir la carta boca arriba.</p>
+                      <p>2. Pedir la carta boca abajo, en cuyo caso debe colocar boca arriba la carta que tuviera oculta anteriormente.</p>
+                      <p>Si en su turno un jugador se pasase del <i>siete y medio</i>, debe mostrar todas sus cartas y pierde inmediatamente su apuesta.</p>
+                      <a name="juegaBanca"></a>
+                      <p>Juega la banca</p>
+                      <p>Una vez hayan hecho las apuestas todos los jugadores, le llega el turno a <b>la banca</b>. Si quedara algún jugador que no se hubiese pasado de <i>siete y medio</i>, y por lo tanto está todavía en condiciones de poder ganar su apuesta, la banca procederá a su vez a jugar.</p>
+                      <p>La banca no hace apuestas, simplemente recibe las de los jugadores, y juega como los demás jugadores, plantándose (si cree que así gana a todos o algunos de los jugadores que quedan) o dándose cartas, de una en una, pero con todas sus cartas boca arriba hasta decidir plantarse.</p>
+                      <a name="cobraApuestas"></a>
+                      <p>Cobrar las apuestas</p>
+                      <p>La banca juega contra todos y cada uno de los jugadores, y por lo tanto si ella se ha pasado, deberá pagar a todos aquellos jugadores que e hubieran plantado.</p>
+                      <p>Si la banca se ha plantado comprueba con cada jugador su jugada para ver a quién vence y con quien pierde. En cada apuesta vence quien más se acerque a <i>siete y medio</i>. <b>En caso de empate gana la banca</b>; por lo tanto, si la banca tiene <i>siete y medio</i> gana automáticamente a todos los jugadores.</p>
+                      <p>La banca debe pagar la cantidad apostada, a cada jugador con el que pierda, y a la inversa, cada jugador que pierda con la banca debe pagarle a ésta lo apostado.</p>
+                      <p>Si un jugador tiene <i>siete y medio</i> (y la banca no) cobra el doble de lo apostado y además toma la banca en la mano siguiente.</p>
+                      <a name="compraBanca"></a>
+                      <p>Compra de la banca</p>
+                      <p>Antes de empezar cada mano, cada jugador podrá hacer una <b>oferta de compra por la banca</b> a quien la tuviera en ese momento. En caso de que se aceptara, la banca pasa al jugador que hizo la oferta.</p>
+                      <a name="particularidadesLudo"></a>
+                      <p>Particularidades en Ludoteka</p>
+                      <p>Dado que en Ludoteka no se apuesta dinero ni ninguna <i>moneda virtual</i> que lo sustituya y siguiendo el mismo esquema que en todos los demás juegos ofrecidos, de partidas con principio y final determinados, se ha realizado una adaptación del juego para que las partidas sí tengan en sí mismo un objetivo concreto.</p>
+                      <ul class="ul1">
+                      <li>Los jugadores comienzan la partida con un número de puntos fijo que irán apostando, dependiendo del número de jugadores y máxmimo de manos a jugar: al jugar a 15 manos, 25, 22 ó 20 puntos según sean <b>4, 5 ó 6 jugadores</b>; y al jugar a 30 manos, 30, 27 ó 25 puntos.</li>        <li>El jugador que pierde sus puntos <b>queda eliminado</b> de la partida.</li>
+                      <li>La partida continúa hasta que un único jugador se hace con todos los puntos en juego, quedando los demás eliminados, o bien hasta que se disputa el máximo de manos fijadas para la partida, que puede ser <b>15 ó 30</b>, en cuyo caso el vencedor es quien acumula mayor cantidad de puntos al final de la partida.</li>
+                      <li>La cantidad de puntos a apostar en cada mano se escoge entre 4 posibilidades, con valores que se van incrementando paulatinamente a medida que se desarrolla el juego. En las primeras manos las apuestas posibles oscilan entre 2 y 5, y suben hasta un rango entre 6 y 12 puntos cuando el número de manos ya se acerca al máximo de 15 ó 30.</li>
+                      <li>Cuando el jugador que posee la banca es eliminado, ésta pasa al jugador que en la mano correspondiente haya obtenido la mejor jugada.</li>
+                      </ul>
+                      <a name="compraBancaLudo"></a>
+                      <p>Compra de la banca en Ludoteka</p>
+                      <p>Los jugadores pueden comprar la banca. El sistema de compraventa es el siguiente:</p>
+                      <p>Cada jugador indica la cantidad de puntos que está dispuesto a ofrecer, en caso de estar interesado en la compra, inmediatamente después de indicar  su apuesta y antes de realizar su jugada.</p>
+                      <p>El jugador que realiza una oferta por la banca debe superar la oferta anterior realizada en la misma mano, si la hubiese. Como máximo puede pujar ofreciendo la mitad de los puntos que le quedarían en caso de perder su apuesta.</p>
+                      <p>En caso de haberse realizado alguna oferta, al finalizar la mano ésta se traslada a la banca, que simplemente debe aceptarla o rechazarla. Excepcionalmente, cuando un jugador logra <i>siete y medio</i> o cuando la banca queda eliminada, y por lo tanto la banca cambia de jugador, las ofertas quedan anuladas.</p>
+            </div>
+          </div>
+      <div class="col-md-2 col-md-offset-5">
+         <input id="inicio" type="button" value="Inicio" onclick="redireccionarinicio();"  style="">
+      </div>
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

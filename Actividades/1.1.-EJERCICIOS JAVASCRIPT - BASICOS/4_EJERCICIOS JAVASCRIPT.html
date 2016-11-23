@@ -1,0 +1,47 @@
+<html>
+<body>
+<script language="JavaScript">
+function calcularSuma()
+{
+    var casilla1=document.getElementById("num1");
+    var n1 = casilla1.value;
+    var casilla2=document.getElementById("num2");
+    var n2 = casilla2.value;
+    var casilla3=document.getElementById("num3");
+    var n3 = casilla3.value;
+
+if (numero1 == numero2){
+   document.write("Los dos números son iguales")
+}else{
+   if (numero1 > numero2) {
+      document.write("El primer número es mayor que el segundo")
+   }else{
+      document.write("El primer número es menor que el segundo")
+   }
+} 
+}
+
+</script>    
+    <form>
+        Primer numero:
+        <input type="text" name="num1" id="num1" />
+        <br />
+ 
+        Segundo numero:
+        <input type="text" name="num2" id="num2" />
+        <br />
+ 
+        Tercer numero:
+        <input type="text" name="num3" id="num3" />
+        <br />
+ 
+        <p id="resultado">Suma: </p>
+ 
+        <button type="button" 
+            onclick="sumarCasillas('num1', 'num2', 'num3', 'resultado');">
+            Calcular suma</button>
+ 
+    </form>
+</body>
+</html>
+ 

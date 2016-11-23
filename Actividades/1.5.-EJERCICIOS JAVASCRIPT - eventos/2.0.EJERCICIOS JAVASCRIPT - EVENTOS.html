@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Eventos</title> 
+<script>
+window.onload =function{
+
+var fontSize = 16;
+  function zoomIn() {
+    fontSize += 0.1; document.body.style.fontSize = fontSize + "em";
+  }
+  function zoomOut() {
+    fontSize -= 0.1; document.body.style.fontSize = fontSize + "em";
+    }
+  document.getElementById("p1").onclick = zoomIn;
+  document.getElementById("p2").onclick = zoomIn;
+  document.getElementById("p3").onclick = zoomIn;
+  }
+    
+</script>
+</head>
+
+<body>
+
+   <p id="p1">Este texto debe aumentar de tamano</p>
+   <p id="p2">Este texto debe aumentar de tamano</p>
+   <p id="p3">Este texto debe aumentar de tamano</p>
+
+</body>
+</html>

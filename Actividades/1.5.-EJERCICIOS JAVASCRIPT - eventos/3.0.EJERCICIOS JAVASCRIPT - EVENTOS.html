@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Eventos</title> 
+</head>
+<script type="text/javascript">
+	window.onload = function() {
+	function verde() {
+	         this.style.color = "red";
+	         }
+	function rojo() {
+	         this.style.color = "blue";
+	         }	       
+	document.getElementById("cambiar").onclick = verde;
+	document.getElementById("cambiar").ondblclick = rojo;
+}
+  </script>
+
+<body>
+  <h1>Enlaces de colores</h1>
+   <a id="rojo">Cambiar a rojo</a><br/>
+   <a id="azul"> Cambiar a azul</a><br/>
+  <h2 id="cambiar">Esta linea debe cambiar de color.</h2>
+</body>
+
+</html>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Javascript en enlaces:</title> 
+<script type="text/javascript">
+function cambia(col) {
+         document.getElementById('cambiar').style.color = col 
+         }
+</script>
+</head>
+<body>
+  <h1>Javascript en enlaces</h1>
+   <a href="javascript:cambia('red')">Cambiar a rojo</a><br/>
+   <a href="javascript:cambia('blue')">Cambiar a azul</a><br/>
+  <h2 id="cambiar">Esta línea debe cambiar de color.</h2>
+</body>
+</html>

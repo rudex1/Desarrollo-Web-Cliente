@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+    .master {height:270px;width:800px;padding:10px;border:2px solid red; 
+       background-color:green;margin:0 auto 0 auto;}
+    div   {height:100px;width:500px;padding:10px;border:2px solid red;  
+       background-color:blue;margin:0 auto 0 auto;}
+    p {background-color:orange;text-align:center;}
+    span  {background-color:purple;border:2px solid red;}
+
+    </style>
+<script type="text/javascript">
+  window.onload = function(){
+            var elems = document.body.getElementsByTagName("*");
+
+                for (var i = 0; i < elems.length; i++){
+                    elems[i].addEventListener("click", cambioColor,false);
+                    
+                }
+        } 
+        function cambioColor(event) {
+        
+        
+        this.style.backgroundColor='yellow';
+        
+        if (this.style.borderColor=="#FF0000" | this.tagName == "DIV" | this.tagName=="SPAN" ){
+        {
+        
+        event.stopPropagation();
+        }
+        }
+
+}
+</script>
+</script>
+  </head>
+  <body>
+    <div class="master">
+    <div onclick="cambioColor()"><p>Soy un parrafo.<span>Soy un span</span></p></div>
+    </br>
+    <div><p>Soy un parrafo.<span>Soy un span</span></p></div>
+    </div>
+  </body>
+</html>

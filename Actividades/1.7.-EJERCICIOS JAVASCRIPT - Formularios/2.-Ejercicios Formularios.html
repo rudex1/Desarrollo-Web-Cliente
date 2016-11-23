@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formularios</title>
+	<style type="text/css"> 
+
+	.cuadrado {
+     width: 100px; 
+     height: 100px; 
+     background: gray;
+	}
+	.div{
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		box-sizing: 10;
+		background: gray;
+	}
+
+
+	</style> 
+	<script type="text/javascript">
+	window.onload = function(){
+  
+        }
+        function cambioColor(){
+        var sel = document.cuadro.seleccion;
+        var color = document.cuadro.color;
+        var selCuadro = sel.options[sel.selectedIndex].value;
+        var selColor = color.options[color.selectedIndex].value;
+        console.log(selCuadro);
+            switch(selCuadro) {
+              case "1":
+                var cuadro1 = document.getElementById("cuadro1");
+                cuadro1.style.backgroundColor=selColor;
+                break;
+              case "2":
+                var cuadro2 = document.getElementById("cuadro2");
+                cuadro2.style.backgroundColor=selColor;
+                break;
+              case "3":
+                var cuadro3 = document.getElementById("cuadro3");
+                cuadro3.style.backgroundColor=selColor;
+                break;
+              case "4":
+                var cuadro4 = document.getElementById("cuadro4");
+                cuadro4.style.backgroundColor=selColor;
+                break;
+          
+             
+            }
+        }
+	</script>
+</head>
+<body>
+<form method="POST" name="cuadro" action="2.-ejercicios Formularios.html" >
+	<center>
+	<table>
+		<tr>
+			<td>
+				<select id="seleccion" name="seleccion">
+					<option value="seleccion">Selecciona un cuadrado</option>
+					<option value="1">cuadro 1</option>
+					<option value="2">cuadro 2</option>
+					<option value="3">cuadro 3</option>
+					<option value="4">cuadro 4</option>		
+				</select>
+
+			</td>
+			&nbsp;&nbsp;&nbsp;
+			<td>
+				<select name="Color">
+					<option value="Color">Selecciona un color</option>
+	                <option value="blue">Azul</option>
+	                <option value="green">Verde</option>
+	                <option value="yellow">Amarillo</option>
+	                <option value="red">Rojo</option>
+	                	
+				</select>
+			</td>
+		<tr/>	
+	</table>
+	<table border="0" width="" align="center" cellpadding="10px">
+    <tr>
+        <td><div class="cuadrado" name="cuadro1" id="cuadro1"> CONTENIDO 1. . . </div> </td>
+        <td><div class="cuadrado" name="cuadro2" id="cuadro2"> CONTENIDO 2. . . </div> </td>
+    </tr>
+    <tr>
+        <td><div class="cuadrado" name="cuadro3" id="cuadro3"> CONTENIDO 3. . . </div> </td>
+        <td><div class="cuadrado" name="cuadro4" id="cuadro4"> CONTENIDO 4. . . </div> </td>
+    </tr>
+</table>
+	<button type="button"  id="cambio" onclick="cambioColor()">Cambio Color</button>
+	</center>
+</form>
+
+</body>
+</html>

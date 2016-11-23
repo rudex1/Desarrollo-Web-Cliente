@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>  
+<script type="text/javascript">
+
+function abrirParametros(){
+    var ventana=open('','','status=yes,width=400,height=250,menubar=yes');
+    ventana.document.write("Esto es lo primero que aparece<br>");
+    setTimeout(cerrar, 5000);
+  }
+
+function cerrar() {
+	var ventana = window.self;
+	ventana.opener = window.self;
+	ventana.close();
+}
+ 
+</script>
+</head>
+ 
+<body>
+ 
+<form>
+ <input type="button" value="Abrir ventana secundaria" onClick="abrirParametros()" >
+
+</form> 
+ 
+</body>
+</html>

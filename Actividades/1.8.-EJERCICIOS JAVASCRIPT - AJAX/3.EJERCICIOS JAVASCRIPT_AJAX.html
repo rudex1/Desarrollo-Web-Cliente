@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        
+        <title>Ejercicios AJAX</title>
+        <link rel="stylesheet" type="text/css" href="css/myStyle.css">
+    </head>
+    <body>
+        <center>
+             <div class="titulo">
+            <h1>Lista de películas</h1>
+            <div id="peliculas">
+                
+            </div>
+            <div id="contenidor">
+                <div id="contenidos">
+                    <div id="columna1">
+                        <img src="img/Reservoir_dog.jpg" id="img1" onclick=""></img>
+                    </div>
+                    <div id="columna2">
+                        <img src="img/Trainspotting.jpg" id="img1" onclick=""></img>
+                    </div>
+                    <div id="columna3">
+                        <img src="img/Batman_Begins.jpg" id="img1" onclick=""></img>
+                    </div>
+                </div>
+                
+                <div id="contenidos">
+                    <div id="columna1">
+                        <img src="img/Inception.jpg" id="img1" onclick=""></img>
+                    </div>
+                    <div id="columna2">
+                        <img src="img/Snatch.jpg" id="img1" onclick=""></img>
+                    </div>
+                    <div id="columna3">
+                        <img src="img/Gladiator.jpg" id="img1" onclick=""></img>
+                    </div>
+                </div>
+            </div>
+        </center>
+        
+        <script type="text/javascript">
+        
+                function cargarDocumento()
+                {
+                    var xhttp = new XMLHttpRequest();
+                    
+                    xhttp.onreadystatechange = function(){
+                        if(this.readyState == 4){
+                            if(this.status == 200){
+                                var resXml = this.responseXML;
+                                
+                                var peliculas = document.getElementById("peliculas");
+                                var titulo = resXml.getElementsByTagName("Titulo");
+                                var director = resXml.getElementsByTagName("Director");
+                                var cartel = resXml.getElementsByTagName("Cartel");
+                                var sinopsis = resXml.getElementsByTagName("Sinopsis");
+                                
+                                for (var i = 0; i < titulo.length; i++) {
+                                    peliculas.innerHTML += "<div id='pelicula-"+ i + "' class='pelicula'>" + 
+                                    "<a href='#' id='"+i+"'><img src='" + cartel[i].childNodes[0].nodeValue + "' class='cartel' /></a>" +
+                                    "<h2 class='titulo'>" + titulo[i].childNodes[0].nodeValue + "</h2>" +
+                                    "<h4 class='director'>" + director[i].childNodes[0].nodeValue + "</h4>" + 
+                                    "<div class='sinopsis'><p>" + sinopsis[i].childNodes[0].nodeValue + "</p></div>";
+                                }
+                                entzun();
+                            }
+                        }
+                    }
+                    
+                    xhttp.open('GET', 'peliculas.xml', true);
+                    xhttp.send();
+                }
+                
+                cargarDocumento();
+                
+                var numPeliculas = document.getElementsByClassName('pelicula');
+                
+                function entzun(){
+                    for (var i=0;i<numPeliculas.length;i++){
+                        document.getElementById(i).addEventListener('click', mostrarSinopsis);
+                    }
+                }
+                
+                function mostrarSinopsis()
+                {
+                    this.getElementsByClassName('sinopsis').style.display = "block";
+                    console.log("clicked");
+                }
+                
+        </script>
+    </body>
+</html>

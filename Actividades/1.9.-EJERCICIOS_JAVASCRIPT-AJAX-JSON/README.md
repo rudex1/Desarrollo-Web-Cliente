@@ -1,4 +1,4 @@
-EJERCICIOS JAVASCRIPT - AJAX
+EJERCICIOS JAVASCRIPT - AJAX - JSON
 
 1.	Rehacer el ejercicio 2 de los ejercicio anteriores para que en vez de tener los datos en formato XML,
     este en JSON.

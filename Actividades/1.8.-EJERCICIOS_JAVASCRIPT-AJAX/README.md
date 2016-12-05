@@ -10,7 +10,7 @@ EJERCICIOS JAVASCRIPT - AJAX
 
 2.	Crear una página a la que le pediremos la lista de películas almacenadas en un fichero XML 
   	que estara en el servidor. 
-	  A la hora de mostrarlos, se creara una tabla y apareceran en dos columnas separadas.
+	A la hora de mostrarlos, se creara una tabla y apareceran en dos columnas separadas.
 
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <Peliculas>
@@ -44,11 +44,11 @@ EJERCICIOS JAVASCRIPT - AJAX
     Cuando pulsemos sobre cada cartel aparecera la sinopsis de esa pelicula en un partado que estara debajo de las imagenes.
     Cada sinopsis se guardaran en un fichero diferente.
 
-4.	Crear una página en la que habra un boton para pedir al servidor los datos de las peliculas.  
-    Cuando pulsemos sobre el nos apareceran dos objetos select (menu desplegable). 
-    En el primero elegiremos el nombre del director y en funcion de esa eleccion, en el segundo nos apareceran las peliculas de ese director. 
-    Cuando hayamos elegido la pelicula aparecera una breve sinospsis de la pelicula debajo de los objetos select. 
-    Si no se selecciona director, no aparecera ninguna pelicula para elegir.
+4.	crear una página en la que habra un boton para pedir al servidor los datos de las peliculas.  
+    cuando pulsemos sobre el nos apareceran dos objetos select (menu desplegable). 
+    en el primero elegiremos el nombre del director y en funcion de esa eleccion, en el segundo nos apareceran las peliculas de ese director. 
+    cuando hayamos elegido la pelicula aparecera una breve sinospsis de la pelicula debajo de los objetos select. 
+    si no se selecciona director, no aparecera ninguna pelicula para elegir.
 
 
 

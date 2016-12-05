@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicios AJAX-JSON</title>
+        <style type="text/css">
+            #tabla, td, th {
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Lista de peliculas</h1>
+            
+            <table id="tabla">
+                <tr>
+                    <th>Pelicula</th>
+                    <th>Director</th>
+                </tr>
+            </table>
+        </center>
+        <script type="text/javascript">
+            
+                function cargarDocumento()
+                {
+                    var xhttp = new XMLHttpRequest();
+                    
+                    
+                    xhttp.onload = function(){
+                        if(xhttp.readyState == xhttp.DONE){
+                            if(this.status == 200){
+                                
+                                for (var i = 0; i < titulo.length; i++) {
+
+                                    }
+                            }
+                        }
+                    }
+                    
+                    xhttp.open('GET', 'peliculas.json', true);
+                    xhttp.send();
+                }
+                
+                cargarDocumento();
+        </script>
+    </body>
+</html>

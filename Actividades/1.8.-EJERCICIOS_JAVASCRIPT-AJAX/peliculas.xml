@@ -3,7 +3,7 @@
   <Pelicula>
      <Director>Quentin Tarantino</Director >
      <Titulo>Reservoir dogs</Titulo>
-     <Cartel>img/reservoir.jpg</Cartel>
+     <Cartel>img/Reservoir_dog.jpg</Cartel>
      <Sinopsis>Una banda organizada es contratada para atracar una empresa y llevarse unos diamantes. Sin embargo, 
      antes de que suene la alarma, la policÃ­a ya estÃ¡ allÃ­. Algunos miembros de la 
      banda mueren en el enfrentamiento con las fuerzas del orden, y 
@@ -12,7 +12,7 @@
   <Pelicula >
      <Director>Danny Boyle</Director >
      <Titulo>Trainspotting</Titulo>
-     <Cartel>img/trains.jpg</Cartel>
+     <Cartel>img/Trainspotting.jpg</Cartel>
      <Sinopsis>Mark Renton, un joven escocÃ©s, y sus amigos son adictos a la heroÃ­na, 
      lo que significa que viven fuera de la realidad, en un mundo aparte. 
      Dentro del grupo hay un psicÃ³pata alcohÃ³lico y violento, un joven desesperado, 
@@ -22,7 +22,7 @@
   <Pelicula >
      <Director>Christopher Nolan</Director >
      <Titulo>Batman Begins</Titulo>
-     <Cartel>img/batman.jpg</Cartel>
+     <Cartel>img/Batman_Begins.jpg</Cartel>
      <Sinopsis>Nueva adaptaciÃ³n del famoso cÃ³mic. 
      Narra los orÃ­genes de la leyenda de Batman y los motivos que lo convirtieron 
      en el representante del Bien en la ciudad de Gotham. 
@@ -30,9 +30,9 @@
      muertos a tiros en su presencia.</Sinopsis>
   </Pelicula >
   <Pelicula >
-     <Director> Christopher Nolan </Director >
+     <Director> Christopher Nolan</Director >
      <Titulo>Inception</Titulo>
-     <Cartel>img/inception.jpg</Cartel>
+     <Cartel>img/Inception.jpg</Cartel>
      <Sinopsis>Dom Cobb (DiCaprio) es un experto en el arte de apropiarse, durante el sueÃ±o, 
      de los secretos del subconsciente ajeno. La extraÃ±a habilidad de Cobb 
      le ha convertido en un hombre muy cotizado en el mundo del espionaje, 
@@ -42,9 +42,9 @@
      la incepciÃ³n, que consiste en implantar una idea en el subconsciente en lugar de sustraerla.</Sinopsis>
   </Pelicula >
   <Pelicula >
-     <Director> Guy Ritchie </Director >
+     <Director>Guy Ritchie</Director >
      <Titulo>Snatch</Titulo>
-     <Cartel>img/snatch.jpg</Cartel>
+     <Cartel>img/Snatch.jpg</Cartel>
      <Sinopsis>Franky es un ladrÃ³n de diamantes que tiene que entregar un valioso 
      ejemplar a su jefe Avi, pero, antes de hacerlo, se deja convencer por un tal 
      Boris para apostar en un combate ilegal de boxeo. En realidad, se trata de una 
@@ -54,7 +54,7 @@
   <Pelicula >
      <Director>Ridley Scott</Director >
      <Titulo>Gladiator</Titulo>
-     <Cartel>img/gladiator.jpg</Cartel>
+     <Cartel>img/Gladiator.jpg</Cartel>
      <Sinopsis>En el aÃ±o 180, el Imperio Romano domina todo el mundo conocido. 
      Tras una gran victoria sobre los bÃ¡rbaros del norte, el anciano emperador 
      Marco Aurelio (Richard Harris) decide transferir el poder a MÃ¡ximo (Russell Crowe), 

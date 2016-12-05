@@ -22,3 +22,27 @@ img {
     vertical-align: middle;
     padding: 10px;
 }
+.wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+.peliculas {
+    width: 100%;
+}
+.pelicula {
+    width: 300px;
+    float: left;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    padding: 5px;
+    border: 0 solid #ccc;
+    max-height: 560px;
+}
+.cartel {
+    width: 300px;
+    height: 400px;
+}
+.sinopsis {
+    font-size: 12px;
+    display: none;
+}

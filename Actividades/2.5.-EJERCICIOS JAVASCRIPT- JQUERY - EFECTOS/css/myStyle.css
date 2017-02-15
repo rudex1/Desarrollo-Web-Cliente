@@ -1,0 +1,26 @@
+.red {
+    background-color: red;
+}
+.altura {
+    height: 100px;
+}
+.zabalera {
+    width: 100px;
+}
+.altuera2 {
+    height: 200px;
+}
+html, body {
+    height: 100%;
+}
+.top1 {
+            
+    margin-top: 10px;
+}
+.top2 {
+            
+    margin-top: 200px;
+}
+.color {
+    background-color: yellow;
+}

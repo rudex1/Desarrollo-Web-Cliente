@@ -1,0 +1,4 @@
+controlar que no se repitan las cartas
+controlar que el ordenador no pase mas de 7.5
+controlar cuando juador saque menos que el ordenador
+http://www.codigoactionscript.org/obtener-un-numero-aleatorio-sin-que-se-repita/

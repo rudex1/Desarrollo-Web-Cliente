@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang=”es”>
+<head>
+<meta charset=”UTF-8″>
+<title>Listado</title>
+<script type=”text/javascript”>
+var activo1 = false;
+var activo2 = false;
+//Al crear un nuevo usuario se añadiran nuevas celdas:
+function newAlumno(alumno) {
+if(!activo1){
+activo1 = true;
+var newTr = document.createElement("tr");
+//Crear nuevos td’s
+var newTd1 = document.createElement("td");
+var newTd2 = document.createElement("td");
+var newTd3 = document.createElement("td");
+var newTd4 = document.createElement("td");
+
+var newInput = document.createElement("input");
+if(alumno != null){
+activo1 = false;
+newInput.setAttribute("value", alumno);
+}
+var newSpan1 = document.createElement("span");
+var newSpan2 = document.createElement("span");
+var newSpan3 = document.createElement("span");
+//Definimos los ALIAS.
+var newEdad, edad, e;
+var newGenero, genero, g;
+var newNombre, nombre;
+//Creamos los Desplegables.
+var selectEdad = document.createElement("select");
+selectEdad.setAttribute("name", "selectEdad");
+var selectGenero = document.createElement("select");
+selectGenero.setAttribute("name", "selectGenero");
+//Creamos las Edades
+for(var i = 16; i < 30; i++){
+var opcEdad = document.createElement("option");
+opcEdad.setAttribute("value", i);
+opcEdad.appendChild(document.createTextNode(i));
+selectEdad.appendChild(opcEdad);
+}
+//GENEROS
+//Creamos los Generos
+var opcHombre = document.createElement("option");
+var opcMujer = document.createElement("option");
+var opcOtro = document.createElement("option");
+//setAttribute de los Generos
+opcHombre.setAttribute("value", "Hombre");
+opcMujer.setAttribute("value", "Mujer");
+opcOtro.setAttribute("value", "Otro");
+//appendChild de los Generos
+opcHombre.appendChild(document.createTextNode("Hombre"));
+opcMujer.appendChild(document.createTextNode("Mujer"));
+opcOtro.appendChild(document.createTextNode("Otro"));
+//selectGenero de los tres Generos
+selectGenero.appendChild(opcHombre);
+selectGenero.appendChild(opcMujer);
+selectGenero.appendChild(opcOtro);
+//BOTONERA
+var newBorrar = document.createElement("input");
+var newGuardar = document.createElement("input");
+var newEditar = document.createElement("input");
+var variosNombres = document.createElement("input");
+//Añadir ID’s
+newInput.id="alumnoInput";
+newSpan1.id="alumnoP";
+selectEdad.id="edad";
+selectGenero.id="genero";
+//Borrar
+newBorrar.type="Button";
+newBorrar.value="Cancelar";
+newBorrar.className = "btn btn-default";
+newBorrar.onclick = function(){
+newTr.parentElement.removeChild(newTr);
+this.parentElement.removeChild(this);
+};
+//Guardar
+newGuardar.type="Button";
+newGuardar.value="Guardar";
+newGuardar.className = "btn btn-primary";
+newGuardar.onclick = function(){
+activo1 = false;
+//Recoger los valores del input, de la edad y del genero
+nombre = document.getElementById("alumnoInput").value;
+//Comprobar:
+if(nombre != "" || alumno != null){
+newBorrar.value = "Borrar";
+newBorrar.className = "btn btn-danger";
+e = document.getElementById("edad");
+edad = e.options[e.selectedIndex].text;
+g = document.getElementById("genero");
+genero = g.options[g.selectedIndex].text;
+newNombre = document.createTextNode(nombre);
+newEdad = document.createTextNode(edad);
+newGenero = document.createTextNode(genero);
+
+newSpan1.appendChild(newNombre);
+newSpan2.appendChild(newEdad);
+newSpan3.appendChild(newGenero);
+//Quitar el boton guardar y poner en su lugar el de editar.
+//Quitar el selectEdad y poner el valor edad .
+//Quitar el selectGenero y poner el valor genero.
+newTd1.replaceChild(newSpan1, newInput);
+newTd2.replaceChild(newSpan2, selectEdad);
+newTd3.replaceChild(newSpan3, selectGenero);
+newTd4.replaceChild(newEditar, newGuardar);
+}
+};
+//Editar
+newEditar.type="Button";
+newEditar.value="Editar";
+newEditar.className = "btn btn-default";
+newEditar.onclick = function(){
+//Coger el valor del nombre
+activo1 = false;
+nombre = document.getElementById("alumnoP").innerHTML;
+if(nombre != "" || alumno != null){
+newBorrar.value = "Cancelar";
+newBorrar.className = "btn btn-default";
+newSpan1.textContent = "";
+newSpan2.textContent = "";
+newSpan3.textContent = "";
+//Crear el nodo de texto.
+newNombre = document.createTextNode(nombre);
+newInput.appendChild(newNombre);
+newTd1.replaceChild(newInput, newSpan1);
+newTd2.replaceChild(selectEdad, newSpan2);
+newTd3.replaceChild(selectGenero, newSpan3);
+newTd4.replaceChild(newGuardar, newEditar );
+}
+};
+newTd1.appendChild(newInput);
+newTd2.appendChild(selectEdad);
+newTd3.appendChild(selectGenero);
+newTd4.appendChild(newGuardar);
+newTd4.appendChild(newBorrar);
+newTr.appendChild(newTd1);
+newTr.appendChild(newTd2);
+newTr.appendChild(newTd3);
+newTr.appendChild(newTd4);
+document.getElementsByTagName(“tbody”)[0].appendChild(newTr);
+}
+}
+function guardarNombres() {
+if(!activo2){
+activo2 = true;
+var newText = document.createElement(“textarea”);
+newText.id = “nombres”;
+newText.setAttribute("name", "nombres");
+newText.setAttribute("cols", 10);
+newText.setAttribute("rows", 10);
+newText.className = "form-control";
+
+document.body.appendChild(newText);
+newButton = document.createElement("input");
+document.body.appendChild(newButton);
+newButton.type = "button";
+newButton.value = "Hecho";
+newButton.className = "btn btn-default";
+newButton.onclick = function() {
+activo2 = false;
+var nombresText = document.getElementById("nombres").value;
+var nombres = nombresText.split("\n");
+for(var i=0; i<nombres.length; i++){
+if(nombres[i] != "")
+newAlumno(nombres[i]);
+}
+document.getElementById("nombres").value = " ";
+newText.parentElement.removeChild(newText);
+newButton.parentElement.removeChild(newButton);
+}
+}
+}
+
+</script>
+</head>
+<body>
+<h2>Tabla Alumnos</h2>
+</br>
+<button onclick=”newAlumno()”>Añadir Alumno</button>
+<button onclick=”guardarNombres()”>Añadir varios Alumnos</button>
+</br>
+<table id=”tabla”>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Edad</th>
+<th>Género</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>

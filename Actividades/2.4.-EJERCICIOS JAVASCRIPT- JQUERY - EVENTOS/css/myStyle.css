@@ -1,0 +1,31 @@
+body{
+	width: 800px;
+	height: 1000px;
+	margin-left: auto;
+    margin-right: auto;
+
+}
+.colorAzul{
+
+	color: blue;
+
+}
+#cajaAzul {
+	background-color: blue; height: 200px;
+}
+#cajaRojo {
+	background-color: red; height: 200px;
+}
+#cajaVerde {
+	background-color: green; height: 200px;
+}
+#cajaAmarilla {
+	background-color: yellow; height: 200px;
+}
+.orange{
+	background-color:orange;
+	}
+
+.blue{
+	background-color:blue;
+	}

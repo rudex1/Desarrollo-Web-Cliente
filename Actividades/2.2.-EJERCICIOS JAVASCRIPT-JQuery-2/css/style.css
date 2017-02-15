@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	background-color: #b6b6b6;
+}
+body{
+	width: 750px;
+	height: 800px;
+	margin: auto;
+	background: #fff;
+}
+#asientos{
+  background-color: ;
+  margin: 0;
+  padding: 0;
+  /* IMPORTANTE */
+  text-align: center;
+}
+#row_1, #row_2, #row_3,#row_4{
+	line-height: 200%;
+}

@@ -15,7 +15,7 @@ $(document).ready(function ()
 function aritmetika()
 {
 	$.ajax ({
-		url: 	'./2.php',     
+		url: 	'./php/EJERCICIOS_JQUERY_AJAX_2.php',     
 		type:   'post', 
 		data: 	$('#formulario').serialize(), 
     

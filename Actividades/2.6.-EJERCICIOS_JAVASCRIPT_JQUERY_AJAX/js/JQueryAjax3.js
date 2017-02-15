@@ -10,7 +10,7 @@ $(document).ready(function(){
         if(irik){
             $.ajax({
                 type:'POST',
-                url:'./3.php',
+                url:'./php/EJERCICIOS_JQUERY_AJAX_3.php',
                 dataType: 'json',
                 
                 success:function(resp){

@@ -1,1 +1,137 @@
-<!doctype html><html> <head><meta charset="utf-8"><title>Juego 7 y media en JavaScript</title>	<link rel="stylesheet" href="assets/css/main.css" /></head><body><!--<body onload="game.init()">--> <!-- Aquí podemos iniciar nuestro juego --><form name="juego">	<center>  	<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">        <div class="modal-dialog modal-lg">              <div class="modal-content">              	 <center><h1>SIETE Y MEDIO</h1></center><hr/>	              </div>        </div>  	</div>		 <!--div-->	<div id="contenedor">		<div id="contenidos">					</div>			<div id="contenidos">								<div id="columna1">		      	<a href="#mesaJuego"><input id="cmdJugar" type="button" name="cmdJugar" value="Iniciar el juego" onclick="inicio()"></a>		    		<input id="Ayuda" type="button" value="Ayuda" onclick="apareceayuda();" readonly>			    	<input id="Reglas" type="button" name="Reglas" value="Reglas" onclick="redireccionar();">			    	<input id="Registro" type="button" name="Registro_Usuario" value="Registro Registro Usuarios" onclick="redireccionarRegistro();" >				</div>			</div>				<div>				<div id="contenidos">					<div id="columna1">						<label>						<h2><b><font>Creditos Bitcoin</font></b></h2>						<input id="creditos" name="creditos" type="text">						</label>					</div>					<div id="columna2">						<div><input id="aumentar" type="button" onclick="incrementar();" value="+ Creditos"></div>						<br/>						<div><input id="disminuir" type="button" onclick="decrementar();" value="- Creditos"></div>					</div>					<div id="columna3">						<a href="http://www.gifmania.com/Gif-Animados-Objetos/Imagenes-Dinero/Monedas/" target="_blank"><img src="http://www.gifmania.com/Gif-Animados-Objetos/Imagenes-Dinero/Monedas/Pilas-Monedas-55928.gif" alt="Monedas - GIFMANIA" /></a>					</div>										<div id="columna4">						<h2><b><font>Victorias Jugador</font></b></h2>	<h4 id="victorias-jugador">0</h4>	                    					</div>						<div id="columna5">							                    <h2><b><font>Victorias Ordenador</font></b></h2> <h4 id="victorias-Ordenador">0</h4>					</div>					</div>			</div>		<!--tablero de juego -->		<div class="modal fade" id="mesaJuego" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true" style='display:none;'>			<div class="container-fluid" align="center">                        <div id="columna1">                <div id="jugador">                	<h2>Jugador</h2><div id="nombre"></div>                	<h2 id="marcador-jugador">0</h2>                                        <button id="plantarse">Plantarse</button>                    <button id="nuevo-juego">Siguiente partida</button>                    <div id="mensaje"></div>                </div>               </div>            <!--cartas de juegador -->            <div id="columna2">            	<div id="contenedor-jugador">                	<h3>Tus cartas</h3>                	<img src="img/card_back.png" id="carta-click" />                </div>            </div>            <div id="mesa_cartasJ">            <div id="columna1">            	<div id="cartas-jugador"></div>            	            </div>                        </div>                <div id="Ordenador">                	<div id="columna1">                        <h2>Ordenador</h2><h2 id="marcador-Ordenador">0</h2>                                            </div>                    <!--cartas del ordenador -->                    <div id="columna2">                       	<div id="contenedor-Ordenador">                            <h3>Cartas del Ordenador</h3>                            <img src="img/card_back.png" id="cartas-ordenador">                        </div>                    </div>                    <div id="columna3">                    	<div id="cartas-Ordenador" ></div>                    </div>                </div>            </div>            <input id="salir" type="button" name="Salir" value="Termiar Partida" onclick="cerrarJuego();">        </div>		<div id="ayuda">		    <center> 		    	<h1><b><font color="black">AYUDA</font></b></h1>		    </center>		     <br>		    <font>		    	1. Para jugar presione Iniciar Juego.		    	<br/>			    2. El objetivo del juego es llegar a hacer 7.5.			    <br>			    3. Para este juego las cartas vale 1,2,etc. segun su numero			    <br>			    4. El computador siempre tendra tan solo dos cartas.. ni mas ni menos..Si en las dos primeras cartas de este saca 7.5  el gana y ud pierde			    <br>			    5. El 10 sota, 11 caballo ,12 rey. vale 0.5 puntos...			    <br>			    6.Al final se dan los reportes .			    <br>			    7. Para terminar el juego presione Terminar Partida.			    <br/>			    8. ¡Qué se divierta!		    </font>		    <br/><br/>		    <center>		    	<input id="cerrar-ayuda" type="button" value="cerrar" onclick="desapareceayuda();">		    </center>		    		</div>	</center> </form>	    <!-- Scripts -->    <!--<script src="assets/js/main.js"></script> -->		<script src="js/app.js"></script></body></html>
+<!doctype html>
+<htm lang="es"> 
+<head>
+<meta charset="utf-8">
+<title>Juego 7 y media en JavaScript</title>
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+<!--<body onload="game.init()">--> <!-- Aquí podemos iniciar nuestro juego -->
+
+<form name="juego">
+	<center>
+  	<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+              	 <center><h1>SIETE Y MEDIO</h1></center><hr/>	
+              </div>
+        </div>
+  	</div>
+		
+ <!--div-->
+	<div id="contenedor">
+		<div id="contenidos">			
+		</div>
+			<div id="contenidos">				
+				<div id="columna1">
+		      	<a href="#mesaJuego"><input id="cmdJugar" type="button" name="cmdJugar" value="Iniciar el juego" onclick="inicio()"></a>
+		    		<input id="Ayuda" type="button" value="Ayuda" onclick="apareceayuda();" readonly>
+			    	<input id="Reglas" type="button" name="Reglas" value="Reglas" onclick="redireccionar();">
+			    	<input id="Registro" type="button" name="Registro_Usuario" value="Registro Registro Usuarios" onclick="redireccionarRegistro();" >
+				</div>
+			</div>	
+			<div>
+				<div id="contenidos">
+					<div id="columna1">
+						<label>
+						<h2><b><font>Creditos Bitcoin</font></b></h2>
+						<input id="creditos" name="creditos" type="text">
+						</label>
+					</div>
+					<div id="columna2">
+						<div><input id="aumentar" type="button" onclick="incrementar();" value="+ Creditos"></div>
+						<br/>
+						<div><input id="disminuir" type="button" onclick="decrementar();" value="- Creditos"></div>
+					</div>
+					<div id="columna3">
+						<a href="http://www.gifmania.com/Gif-Animados-Objetos/Imagenes-Dinero/Monedas/" target="_blank"><img src="http://www.gifmania.com/Gif-Animados-Objetos/Imagenes-Dinero/Monedas/Pilas-Monedas-55928.gif" alt="Monedas - GIFMANIA" /></a>
+					</div>					
+					<div id="columna4">
+						<h2><b><font>Victorias Jugador</font></b></h2>	<h4 id="victorias-jugador">0</h4>	                    
+					</div>	
+					<div id="columna5">						
+	                    <h2><b><font>Victorias Ordenador</font></b></h2> <h4 id="victorias-Ordenador">0</h4>
+					</div>	
+				</div>
+			</div>
+
+		<!--tablero de juego -->
+		<div class="modal fade" id="mesaJuego" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true" style='display:none;'>
+			<div class="container-fluid" align="center">
+            
+            <div id="columna1">
+                <div id="jugador">
+                	<h2>Jugador</h2><div id="nombre"></div>
+                	<h2 id="marcador-jugador">0</h2>                    
+                    <button id="plantarse">Plantarse</button>
+                    <button id="nuevo-juego">Siguiente partida</button>
+                    <div id="mensaje"></div>
+                </div>   
+            </div>
+            <!--cartas de juegador -->
+            <div id="columna2">
+            	<div id="contenedor-jugador">
+                	<h3>Tus cartas</h3>
+                	<img src="img/card_back.png" id="carta-click" />
+                </div>
+            </div>
+            <div id="mesa_cartasJ">
+            <div id="columna1">
+            	<div id="cartas-jugador"></div>            	
+            </div>
+            
+            </div>
+
+                <div id="Ordenador">
+                	<div id="columna1">
+                        <h2>Ordenador</h2><h2 id="marcador-Ordenador">0</h2>                        
+                    </div>
+                    <!--cartas del ordenador -->
+                    <div id="columna2">
+                       	<div id="contenedor-Ordenador">
+                            <h3>Cartas del Ordenador</h3>
+                            <img src="img/card_back.png" id="cartas-ordenador">
+                        </div>
+                    </div>
+                    <div id="columna3">
+                    	<div id="cartas-Ordenador" ></div>
+                    </div>
+                </div>
+            </div>
+            <input id="salir" type="button" name="Salir" value="Termiar Partida" onclick="cerrarJuego();">
+        </div>
+
+		<div id="ayuda">
+		    <center> 
+		    	<h1><b><font color="black">AYUDA</font></b></h1>
+		    </center>
+		     <br>
+		    <font>
+		    	1. Para jugar presione Iniciar Juego.
+		    	<br/>
+			    2. El objetivo del juego es llegar a hacer 7.5.
+			    <br>
+			    3. Para este juego las cartas vale 1,2,etc. segun su numero
+			    <br>
+			    4. El computador siempre tendra tan solo dos cartas.. ni mas ni menos..Si en las dos primeras cartas de este saca 7.5  el gana y ud pierde
+			    <br>
+			    5. El 10 sota, 11 caballo ,12 rey. vale 0.5 puntos...
+			    <br>
+			    6.Al final se dan los reportes .
+			    <br>
+			    7. Para terminar el juego presione Terminar Partida.
+			    <br/>
+			    8. ¡Qué se divierta!
+		    </font>
+		    <br/><br/>
+		    <center>
+		    	<input id="cerrar-ayuda" type="button" value="cerrar" onclick="desapareceayuda();">
+		    </center>		    
+		</div>
+	</center> 
+</form>	
+    <!-- Scripts -->
+    <!--<script src="assets/js/main.js"></script> -->
+		<script src="js/app.js"></script>
+</body>
+</html>

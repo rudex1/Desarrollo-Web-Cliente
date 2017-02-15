@@ -8,7 +8,7 @@ var data = {};
 $(document).ready(function() {
   $('input[type="submit"]').on('click', function() {
       resetErrors();
-      var url = './php/EJERCICIOS_JQUERY_AJAX_1.php';
+      var url = './php/JQuery_Ajax_1.php';
       $.each($('form input, form select, form textarea'), function(i, v) {
           if (v.type !== 'submit') {
               data[v.name] = v.value;
